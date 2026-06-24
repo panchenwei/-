@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IELTS 同义词专项训练</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <div>
+            <p class="eyebrow">IELTS Reading</p>
+            <h1>同义词专项训练</h1>
+          </div>
+          <button class="icon-button desktop-only" id="sidebarCollapseButton" type="button" aria-label="隐藏导航栏">
+            <span></span>
+          </button>
+        </div>
+
+        <div class="sidebar-summary">
+          <div class="summary-card">
+            <span class="summary-label">完成进度</span>
+            <strong id="chapterProgressText">0 / 20</strong>
+          </div>
+          <div class="summary-card">
+            <span class="summary-label">当前章节</span>
+            <strong id="currentChapterLabel">List 1</strong>
+          </div>
+        </div>
+
+        <nav class="chapter-nav" id="chapterNav" aria-label="章节导航"></nav>
+      </aside>
+
+      <div class="main-shell">
+        <header class="topbar">
+          <div class="topbar-left">
+            <button class="icon-button" id="sidebarOpenButton" type="button" aria-label="显示导航栏">
+              <span></span>
+            </button>
+            <div>
+              <p class="eyebrow">Apple-style study board</p>
+              <h2 id="topbarTitle">List 1</h2>
+            </div>
+          </div>
+
+          <div class="topbar-actions">
+            <button class="glass-button" id="scrollTopButton" type="button">回到顶部</button>
+            <button class="glass-button accent-button" id="settingsButton" type="button">设置</button>
+          </div>
+        </header>
+
+        <main class="main-content" id="mainContent">
+          <div class="loading-card">正在加载章节内容…</div>
+        </main>
+      </div>
+    </div>
+
+    <div class="backdrop" id="backdrop" hidden></div>
+
+    <section class="settings-panel" id="settingsPanel" aria-labelledby="settingsTitle" hidden>
+      <div class="settings-header">
+        <div>
+          <p class="eyebrow">Reset Progress</p>
+          <h3 id="settingsTitle">章节重做设置</h3>
+        </div>
+        <button class="icon-button" id="closeSettingsButton" type="button" aria-label="关闭设置">
+          <span></span>
+        </button>
+      </div>
+
+      <p class="settings-copy">勾选想清空的章节后点击重置。系统只会清除这些章节的本地作答进度，不会改动原始内容。</p>
+
+      <div class="settings-actions">
+        <button class="pill-button" id="selectCurrentButton" type="button">选中当前章节</button>
+        <button class="pill-button" id="selectAllButton" type="button">全选</button>
+        <button class="pill-button" id="clearSelectionButton" type="button">清空勾选</button>
+      </div>
+
+      <div class="settings-list" id="settingsList"></div>
+
+      <div class="settings-footer">
+        <button class="glass-button" id="resetSelectedButton" type="button">清空所选章节</button>
+        <button class="glass-button" id="resetCurrentButton" type="button">清空当前章节</button>
+        <button class="glass-button danger-button" id="resetAllButton" type="button">清空全部章节</button>
+      </div>
+    </section>
+
+    <script src="./data/chapters.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>
