@@ -408,7 +408,9 @@
     const placedTermIds = new Set(
       Object.values(chapterState.test.placements).flatMap((value) => (Array.isArray(value) ? value : [])),
     );
-    const bankTerms = termCatalog.filter((term) => !placedTermIds.has(term.id));
+    const bankTerms = termCatalog
+      .filter((term) => !placedTermIds.has(term.id))
+      .sort((a, b) => a.displayOrder - b.displayOrder);
 
     const targets = chapter.testYourself
       .map((item) => {
@@ -858,13 +860,50 @@
   }
 
   function getTermCatalog(chapter) {
-    return chapter.testYourself.flatMap((item) =>
+    const terms = chapter.testYourself.flatMap((item) =>
       item.acceptedAnswers.map((term, termIndex) => ({
         id: `${item.id}-${termIndex}`,
         text: term,
         targetId: item.id,
       })),
     );
+
+    const shuffledIds = seededShuffle(
+      terms.map((term) => term.id),
+      `${chapter.id}-section-4`,
+    );
+    const orderMap = new Map(shuffledIds.map((id, index) => [id, index]));
+
+    return terms.map((term) => ({
+      ...term,
+      displayOrder: orderMap.get(term.id) ?? 0,
+    }));
+  }
+
+  function seededShuffle(values, seedText) {
+    const result = [...values];
+    let seed = hashString(seedText);
+
+    for (let index = result.length - 1; index > 0; index -= 1) {
+      seed = nextSeed(seed);
+      const swapIndex = seed % (index + 1);
+      [result[index], result[swapIndex]] = [result[swapIndex], result[index]];
+    }
+
+    return result;
+  }
+
+  function hashString(text) {
+    let hash = 2166136261;
+    for (const char of text) {
+      hash ^= char.charCodeAt(0);
+      hash = Math.imul(hash, 16777619);
+    }
+    return hash >>> 0;
+  }
+
+  function nextSeed(seed) {
+    return (Math.imul(seed, 1664525) + 1013904223) >>> 0;
   }
 
   function getChoiceOptionText(choice, optionId) {
