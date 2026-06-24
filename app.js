@@ -277,7 +277,7 @@
                 ${
                   placedOption
                     ? renderDraggableCard("matching-option", placedOption.id, placedOption.text)
-                    : '<span class="empty-copy">把选项拖到这里</span>'
+                    : '<span class="empty-copy">先点击右侧选项，再点击这里放入</span>'
                 }
               </div>
             </div>
@@ -297,7 +297,7 @@
           <div>
             <p class="eyebrow">Section 2</p>
             <h3>Matching Practice</h3>
-            <p class="section-helper">按题目原样完成拖拽配对。右侧选项池会固定在附近，减少拖动距离。</p>
+            <p class="section-helper">按题目原样完成配对。先点击右侧一个选项，再点击对应空框放入；如果放错了，点击已放入的选项即可重新选择。</p>
           </div>
           <div class="section-actions">
             ${renderSectionStatus(result.isComplete, chapterState.matching.checked, "已完成", "待检查")}
