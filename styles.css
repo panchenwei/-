@@ -511,7 +511,56 @@ button {
   gap: 16px;
 }
 
+.interactive-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 18px;
+  align-items: start;
+}
+
+.interactive-main {
+  min-width: 0;
+}
+
+.interactive-bank {
+  min-width: 0;
+}
+
+.bank-panel {
+  padding: 18px;
+  border-radius: var(--radius-lg);
+  background: var(--surface-strong);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.sticky-bank {
+  position: sticky;
+  top: 94px;
+}
+
+.bank-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.compact-bank {
+  min-height: 180px;
+  max-height: calc(100vh - 160px);
+  overflow: auto;
+  align-content: flex-start;
+}
+
+.matching-item {
+  display: grid;
+  gap: 10px;
+}
+
 .matching-row {
+  display: flex;
   align-items: stretch;
   gap: 14px;
 }
@@ -560,14 +609,14 @@ button {
   gap: 10px;
   padding: 12px 14px;
   color: var(--text);
+  cursor: pointer;
+  user-select: none;
 }
 
-.drag-card[draggable="true"] {
-  cursor: grab;
-}
-
-.drag-card[data-variant="placed"] {
-  background: var(--surface-strong);
+.drag-card.is-picked {
+  border-color: rgba(10, 132, 255, 0.32);
+  background: rgba(10, 132, 255, 0.14);
+  box-shadow: 0 12px 26px rgba(10, 132, 255, 0.16);
 }
 
 .drag-card .mini-button {
@@ -779,6 +828,18 @@ button:active {
 
   .choice-options {
     grid-template-columns: 1fr;
+  }
+
+  .interactive-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sticky-bank {
+    position: static;
+  }
+
+  .compact-bank {
+    max-height: none;
   }
 
   .matching-row {
