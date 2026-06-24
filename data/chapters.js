@@ -555,27 +555,6 @@ window.CHAPTERS = [
         "number": 1,
         "promptZh": "缺乏，不足",
         "acceptedAnswers": [
-          "abandon",
-          "give up",
-          "forgo",
-          "resign"
-        ]
-      },
-      {
-        "id": "t2",
-        "number": 2,
-        "promptZh": "大量的",
-        "acceptedAnswers": [
-          "ability",
-          "competence",
-          "capability"
-        ]
-      },
-      {
-        "id": "t3",
-        "number": 3,
-        "promptZh": "学术的，科学的",
-        "acceptedAnswers": [
           "absent",
           "lack",
           "deficit",
@@ -583,9 +562,9 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t4",
-        "number": 4,
-        "promptZh": "能力，胜任",
+        "id": "t2",
+        "number": 2,
+        "promptZh": "大量的",
         "acceptedAnswers": [
           "abundant",
           "plentiful",
@@ -593,9 +572,9 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t5",
-        "number": 5,
-        "promptZh": "放弃，停止",
+        "id": "t3",
+        "number": 3,
+        "promptZh": "学术的，科学的",
         "acceptedAnswers": [
           "academic",
           "schooling",
@@ -605,13 +584,35 @@ window.CHAPTERS = [
         ]
       },
       {
+        "id": "t4",
+        "number": 4,
+        "promptZh": "能力，胜任",
+        "acceptedAnswers": [
+          "ability",
+          "competence",
+          "capability"
+        ]
+      },
+      {
+        "id": "t5",
+        "number": 5,
+        "promptZh": "放弃，停止",
+        "acceptedAnswers": [
+          "abandon",
+          "give up",
+          "forgo",
+          "resign"
+        ]
+      },
+      {
         "id": "t6",
         "number": 6,
         "promptZh": "黏附；毗邻",
         "acceptedAnswers": [
-          "accelerate",
-          "increase",
-          "exacerbate"
+          "adhere",
+          "stick",
+          "adjoin",
+          "bordering"
         ]
       },
       {
@@ -651,10 +652,9 @@ window.CHAPTERS = [
         "number": 10,
         "promptZh": "加速；加大",
         "acceptedAnswers": [
-          "adhere",
-          "stick",
-          "adjoin",
-          "bordering"
+          "accelerate",
+          "increase",
+          "exacerbate"
         ]
       }
     ],
@@ -1237,10 +1237,9 @@ window.CHAPTERS = [
         "number": 1,
         "promptZh": "倡导者；辩护者",
         "acceptedAnswers": [
-          "administer",
-          "manage",
-          "control",
-          "be in charge of"
+          "advocate",
+          "proponent",
+          "promote"
         ]
       },
       {
@@ -1248,9 +1247,9 @@ window.CHAPTERS = [
         "number": 2,
         "promptZh": "审美地；美学地",
         "acceptedAnswers": [
-          "adorn",
-          "decorate",
-          "ornate"
+          "aesthetically",
+          "artistically",
+          "in an artistic manner"
         ]
       },
       {
@@ -1258,10 +1257,10 @@ window.CHAPTERS = [
         "number": 3,
         "promptZh": "改变；调整",
         "acceptedAnswers": [
-          "adverse",
-          "negative",
-          "difficult",
-          "reverse"
+          "alter",
+          "change",
+          "modify",
+          "vary"
         ]
       },
       {
@@ -1269,9 +1268,9 @@ window.CHAPTERS = [
         "number": 4,
         "promptZh": "替代；替代物",
         "acceptedAnswers": [
-          "advocate",
-          "proponent",
-          "promote"
+          "alternative",
+          "option",
+          "choice"
         ]
       },
       {
@@ -1279,9 +1278,10 @@ window.CHAPTERS = [
         "number": 5,
         "promptZh": "附属的；辅助的",
         "acceptedAnswers": [
-          "aesthetically",
-          "artistically",
-          "in an artistic manner"
+          "ancillary",
+          "secondary",
+          "sub~",
+          "auxiliary"
         ]
       },
       {
@@ -1299,10 +1299,9 @@ window.CHAPTERS = [
         "number": 7,
         "promptZh": "装饰",
         "acceptedAnswers": [
-          "alert",
-          "wary",
-          "alarm",
-          "aware"
+          "adorn",
+          "decorate",
+          "ornate"
         ]
       },
       {
@@ -1310,10 +1309,10 @@ window.CHAPTERS = [
         "number": 8,
         "promptZh": "警觉，机敏的",
         "acceptedAnswers": [
-          "alter",
-          "change",
-          "modify",
-          "vary"
+          "alert",
+          "wary",
+          "alarm",
+          "aware"
         ]
       },
       {
@@ -1321,9 +1320,10 @@ window.CHAPTERS = [
         "number": 9,
         "promptZh": "管理",
         "acceptedAnswers": [
-          "alternative",
-          "option",
-          "choice"
+          "administer",
+          "manage",
+          "control",
+          "be in charge of"
         ]
       },
       {
@@ -1331,10 +1331,10 @@ window.CHAPTERS = [
         "number": 10,
         "promptZh": "不利地；有害地",
         "acceptedAnswers": [
-          "ancillary",
-          "secondary",
-          "sub~",
-          "auxiliary"
+          "adverse",
+          "negative",
+          "difficult",
+          "reverse"
         ]
       }
     ],
@@ -1925,6 +1925,17 @@ window.CHAPTERS = [
         "number": 1,
         "promptZh": "期待；计划",
         "acceptedAnswers": [
+          "anticipate",
+          "expect",
+          "project",
+          "plan"
+        ]
+      },
+      {
+        "id": "t2",
+        "number": 2,
+        "promptZh": "消灭；征服",
+        "acceptedAnswers": [
           "annihilate",
           "conquer",
           "destroy",
@@ -1932,9 +1943,52 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t2",
-        "number": 2,
-        "promptZh": "消灭；征服",
+        "id": "t3",
+        "number": 3,
+        "promptZh": "吸引人的",
+        "acceptedAnswers": [
+          "appealing",
+          "attractive",
+          "intriguing",
+          "fascinating"
+        ]
+      },
+      {
+        "id": "t4",
+        "number": 4,
+        "promptZh": "先辈，祖先",
+        "acceptedAnswers": [
+          "antecedent",
+          "predecessor",
+          "ancestor",
+          "forefather"
+        ]
+      },
+      {
+        "id": "t5",
+        "number": 5,
+        "promptZh": "赏识，重视",
+        "acceptedAnswers": [
+          "appreciate",
+          "value",
+          "recognize"
+        ]
+      },
+      {
+        "id": "t6",
+        "number": 6,
+        "promptZh": "艰巨的；艰苦的",
+        "acceptedAnswers": [
+          "arduous",
+          "tough",
+          "difficult",
+          "demanding"
+        ]
+      },
+      {
+        "id": "t7",
+        "number": 7,
+        "promptZh": "对手；敌人",
         "acceptedAnswers": [
           "antagonist",
           "enemy",
@@ -1944,42 +1998,9 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t3",
-        "number": 3,
-        "promptZh": "吸引人的",
-        "acceptedAnswers": [
-          "antecedent",
-          "predecessor",
-          "ancestor",
-          "forefather"
-        ]
-      },
-      {
-        "id": "t4",
-        "number": 4,
-        "promptZh": "先辈，祖先",
-        "acceptedAnswers": [
-          "anticipate",
-          "expect",
-          "project",
-          "plan"
-        ]
-      },
-      {
-        "id": "t5",
-        "number": 5,
-        "promptZh": "赏识，重视",
-        "acceptedAnswers": [
-          "appealing",
-          "attractive",
-          "intriguing",
-          "fascinating"
-        ]
-      },
-      {
-        "id": "t6",
-        "number": 6,
-        "promptZh": "艰巨的；艰苦的",
+        "id": "t8",
+        "number": 8,
+        "promptZh": "应用；使用",
         "acceptedAnswers": [
           "apply",
           "utilize",
@@ -1988,34 +2009,14 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t7",
-        "number": 7,
-        "promptZh": "对手；敌人",
-        "acceptedAnswers": [
-          "appreciate",
-          "value",
-          "recognize"
-        ]
-      },
-      {
-        "id": "t8",
-        "number": 8,
-        "promptZh": "应用；使用",
-        "acceptedAnswers": [
-          "arduous",
-          "tough",
-          "difficult",
-          "demanding"
-        ]
-      },
-      {
         "id": "t9",
         "number": 9,
         "promptZh": "伪造的",
         "acceptedAnswers": [
-          "article",
-          "object",
-          "item"
+          "artificial",
+          "man made",
+          "forged",
+          "synthetic"
         ]
       },
       {
@@ -2023,10 +2024,9 @@ window.CHAPTERS = [
         "number": 10,
         "promptZh": "物品，物体",
         "acceptedAnswers": [
-          "artificial",
-          "man made",
-          "forged",
-          "synthetic"
+          "article",
+          "object",
+          "item"
         ]
       }
     ],
@@ -2611,16 +2611,25 @@ window.CHAPTERS = [
         "number": 1,
         "promptZh": "归功于",
         "acceptedAnswers": [
-          "ascend",
-          "soar",
-          "increase",
-          "climb"
+          "attribute … to",
+          "be credited to",
+          "due to"
         ]
       },
       {
         "id": "t2",
         "number": 2,
         "promptZh": "假设",
+        "acceptedAnswers": [
+          "assumption",
+          "belief",
+          "hypothesis"
+        ]
+      },
+      {
+        "id": "t3",
+        "number": 3,
+        "promptZh": "组合，混合",
         "acceptedAnswers": [
           "assemble",
           "rally",
@@ -2630,39 +2639,20 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t3",
-        "number": 3,
-        "promptZh": "组合，混合",
-        "acceptedAnswers": [
-          "assortment",
-          "variety",
-          "classification"
-        ]
-      },
-      {
         "id": "t4",
         "number": 4,
         "promptZh": "特征",
         "acceptedAnswers": [
-          "assumption",
-          "belief",
-          "hypothesis"
+          "attribute",
+          "characteristics",
+          "feature",
+          "traits"
         ]
       },
       {
         "id": "t5",
         "number": 5,
         "promptZh": "达到",
-        "acceptedAnswers": [
-          "attachment",
-          "affection",
-          "connection"
-        ]
-      },
-      {
-        "id": "t6",
-        "number": 6,
-        "promptZh": "依恋，爱好",
         "acceptedAnswers": [
           "attain",
           "achieve",
@@ -2671,13 +2661,23 @@ window.CHAPTERS = [
         ]
       },
       {
+        "id": "t6",
+        "number": 6,
+        "promptZh": "依恋，爱好",
+        "acceptedAnswers": [
+          "attachment",
+          "affection",
+          "connection"
+        ]
+      },
+      {
         "id": "t7",
         "number": 7,
         "promptZh": "各式各样",
         "acceptedAnswers": [
-          "attribute … to",
-          "be credited to",
-          "due to"
+          "assortment",
+          "variety",
+          "classification"
         ]
       },
       {
@@ -2685,10 +2685,10 @@ window.CHAPTERS = [
         "number": 8,
         "promptZh": "攀升，升高",
         "acceptedAnswers": [
-          "attribute",
-          "characteristics",
-          "feature",
-          "traits"
+          "ascend",
+          "soar",
+          "increase",
+          "climb"
         ]
       },
       {
@@ -2707,9 +2707,9 @@ window.CHAPTERS = [
         "number": 10,
         "promptZh": "假设",
         "acceptedAnswers": [
-          "barren",
-          "infertile",
-          "poor"
+          "assumption",
+          "belief",
+          "hypothesis"
         ]
       }
     ],
@@ -3374,10 +3374,11 @@ window.CHAPTERS = [
         "number": 9,
         "promptZh": "偶然的；碰巧的",
         "acceptedAnswers": [
-          "characteristics",
-          "qualities",
-          "property",
-          "feature"
+          "chance",
+          "accidental",
+          "unplanned",
+          "uncertainty",
+          "coincidence"
         ]
       },
       {
@@ -3385,11 +3386,10 @@ window.CHAPTERS = [
         "number": 10,
         "promptZh": "性质，特性",
         "acceptedAnswers": [
-          "chance",
-          "accidental",
-          "unplanned",
-          "uncertainty",
-          "coincidence"
+          "characteristics",
+          "qualities",
+          "property",
+          "feature"
         ]
       }
     ],
@@ -4713,6 +4713,18 @@ window.CHAPTERS = [
         "number": 7,
         "promptZh": "很重要的，很大的",
         "acceptedAnswers": [
+          "considerable",
+          "substantial",
+          "plenty",
+          "ample",
+          "abundant"
+        ]
+      },
+      {
+        "id": "t8",
+        "number": 8,
+        "promptZh": "持续的",
+        "acceptedAnswers": [
           "consistent",
           "constant",
           "persistent",
@@ -4720,9 +4732,9 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t8",
-        "number": 8,
-        "promptZh": "持续的",
+        "id": "t9",
+        "number": 9,
+        "promptZh": "显著的，明显的",
         "acceptedAnswers": [
           "conspicuous",
           "noticeable",
@@ -4731,25 +4743,13 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t9",
-        "number": 9,
-        "promptZh": "显著的，明显的",
-        "acceptedAnswers": [
-          "constituent",
-          "component",
-          "element"
-        ]
-      },
-      {
         "id": "t10",
         "number": 10,
         "promptZh": "成分，要素",
         "acceptedAnswers": [
-          "considerable",
-          "substantial",
-          "plenty",
-          "ample",
-          "abundant"
+          "constituent",
+          "component",
+          "element"
         ]
       }
     ],
@@ -5372,15 +5372,27 @@ window.CHAPTERS = [
         "number": 4,
         "promptZh": "死亡",
         "acceptedAnswers": [
-          "count",
-          "weigh",
-          "value"
+          "demise",
+          "death",
+          "perish",
+          "vanish",
+          "extinct"
         ]
       },
       {
         "id": "t5",
         "number": 5,
         "promptZh": "有价值；有分量",
+        "acceptedAnswers": [
+          "count",
+          "weigh",
+          "value"
+        ]
+      },
+      {
+        "id": "t6",
+        "number": 6,
+        "promptZh": "抵消；反作用",
         "acceptedAnswers": [
           "counteract",
           "negate",
@@ -5390,9 +5402,9 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t6",
-        "number": 6,
-        "promptZh": "抵消；反作用",
+        "id": "t7",
+        "number": 7,
+        "promptZh": "复本；对应物",
         "acceptedAnswers": [
           "counterpart",
           "version",
@@ -5400,9 +5412,9 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t7",
-        "number": 7,
-        "promptZh": "复本；对应物",
+        "id": "t8",
+        "number": 8,
+        "promptZh": "重要的",
         "acceptedAnswers": [
           "crucial",
           "important",
@@ -5412,9 +5424,9 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t8",
-        "number": 8,
-        "promptZh": "重要的",
+        "id": "t9",
+        "number": 9,
+        "promptZh": "使潮湿",
         "acceptedAnswers": [
           "dampen",
           "moisten",
@@ -5423,25 +5435,13 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t9",
-        "number": 9,
-        "promptZh": "使潮湿",
-        "acceptedAnswers": [
-          "daring",
-          "bold",
-          "brave"
-        ]
-      },
-      {
         "id": "t10",
         "number": 10,
         "promptZh": "勇敢的，大胆的",
         "acceptedAnswers": [
-          "demise",
-          "death",
-          "perish",
-          "vanish",
-          "extinct"
+          "daring",
+          "bold",
+          "brave"
         ]
       }
     ],
@@ -6016,10 +6016,9 @@ window.CHAPTERS = [
         "number": 1,
         "promptZh": "致力于，献身于",
         "acceptedAnswers": [
-          "derive",
-          "acquire",
-          "obtain",
-          "originate"
+          "devote to",
+          "dedicate",
+          "specialize"
         ]
       },
       {
@@ -6027,9 +6026,9 @@ window.CHAPTERS = [
         "number": 2,
         "promptZh": "灾难",
         "acceptedAnswers": [
-          "detect",
-          "find",
-          "perceive"
+          "disaster",
+          "catastrophe",
+          "calamity"
         ]
       },
       {
@@ -6037,9 +6036,9 @@ window.CHAPTERS = [
         "number": 3,
         "promptZh": "发展的，演化的",
         "acceptedAnswers": [
-          "devastated",
-          "ruined",
-          "destroyed"
+          "developing",
+          "evolving",
+          "progressing"
         ]
       },
       {
@@ -6047,9 +6046,9 @@ window.CHAPTERS = [
         "number": 4,
         "promptZh": "混乱，紊乱，失调",
         "acceptedAnswers": [
-          "developing",
-          "evolving",
-          "progressing"
+          "disorder",
+          "chaos",
+          "disease"
         ]
       },
       {
@@ -6057,9 +6056,9 @@ window.CHAPTERS = [
         "number": 5,
         "promptZh": "毁坏的，被破坏的",
         "acceptedAnswers": [
-          "devote to",
-          "dedicate",
-          "specialize"
+          "devastated",
+          "ruined",
+          "destroyed"
         ]
       },
       {
@@ -6067,9 +6066,9 @@ window.CHAPTERS = [
         "number": 6,
         "promptZh": "探测，发现",
         "acceptedAnswers": [
-          "diffuse",
-          "travel",
-          "disperse"
+          "detect",
+          "find",
+          "perceive"
         ]
       },
       {
@@ -6077,9 +6076,9 @@ window.CHAPTERS = [
         "number": 7,
         "promptZh": "丢弃，抛弃，移除",
         "acceptedAnswers": [
-          "disaster",
-          "catastrophe",
-          "calamity"
+          "discard",
+          "get rid of",
+          "remove"
         ]
       },
       {
@@ -6087,9 +6086,9 @@ window.CHAPTERS = [
         "number": 8,
         "promptZh": "扩散，传播",
         "acceptedAnswers": [
-          "discard",
-          "get rid of",
-          "remove"
+          "diffuse",
+          "travel",
+          "disperse"
         ]
       },
       {
@@ -6097,9 +6096,9 @@ window.CHAPTERS = [
         "number": 9,
         "promptZh": "争论；争执",
         "acceptedAnswers": [
-          "disorder",
-          "chaos",
-          "disease"
+          "dispute",
+          "argument",
+          "disagreement"
         ]
       },
       {
@@ -6107,9 +6106,10 @@ window.CHAPTERS = [
         "number": 10,
         "promptZh": "起源，得到",
         "acceptedAnswers": [
-          "dispute",
-          "argument",
-          "disagreement"
+          "derive",
+          "acquire",
+          "obtain",
+          "originate"
         ]
       }
     ],
@@ -6692,10 +6692,10 @@ window.CHAPTERS = [
         "number": 1,
         "promptZh": "领域",
         "acceptedAnswers": [
-          "distinct",
-          "diverse",
-          "different",
-          "varied"
+          "domain",
+          "field",
+          "region",
+          "area"
         ]
       },
       {
@@ -6703,9 +6703,10 @@ window.CHAPTERS = [
         "number": 2,
         "promptZh": "引出",
         "acceptedAnswers": [
-          "dividing line",
-          "boundary",
-          "border"
+          "elicit",
+          "induce",
+          "bring out",
+          "draw"
         ]
       },
       {
@@ -6713,10 +6714,9 @@ window.CHAPTERS = [
         "number": 3,
         "promptZh": "分界线",
         "acceptedAnswers": [
-          "domain",
-          "field",
-          "region",
-          "area"
+          "dividing line",
+          "boundary",
+          "border"
         ]
       },
       {
@@ -6745,9 +6745,10 @@ window.CHAPTERS = [
         "number": 6,
         "promptZh": "住处",
         "acceptedAnswers": [
-          "durability",
-          "endurance",
-          "long lasting"
+          "dwelling",
+          "house",
+          "residence",
+          "habitat"
         ]
       },
       {
@@ -6755,10 +6756,10 @@ window.CHAPTERS = [
         "number": 7,
         "promptZh": "不同的",
         "acceptedAnswers": [
-          "dwelling",
-          "house",
-          "residence",
-          "habitat"
+          "distinct",
+          "diverse",
+          "different",
+          "varied"
         ]
       },
       {
@@ -6786,10 +6787,9 @@ window.CHAPTERS = [
         "number": 10,
         "promptZh": "耐久",
         "acceptedAnswers": [
-          "elicit",
-          "induce",
-          "bring out",
-          "draw"
+          "durability",
+          "endurance",
+          "long lasting"
         ]
       }
     ],
@@ -7368,10 +7368,9 @@ window.CHAPTERS = [
         "number": 1,
         "promptZh": "保证",
         "acceptedAnswers": [
-          "emit",
-          "give off",
-          "produce",
-          "release"
+          "ensure",
+          "guarantee",
+          "make sure"
         ]
       },
       {
@@ -7379,9 +7378,10 @@ window.CHAPTERS = [
         "number": 2,
         "promptZh": "时期",
         "acceptedAnswers": [
-          "emphasize",
-          "stress",
-          "focus on"
+          "era",
+          "a period of time",
+          "age",
+          "epoch"
         ]
       },
       {
@@ -7389,9 +7389,8 @@ window.CHAPTERS = [
         "number": 3,
         "promptZh": "除去；消除",
         "acceptedAnswers": [
-          "employ",
-          "use",
-          "exploit"
+          "eradicate",
+          "eliminate"
         ]
       },
       {
@@ -7399,10 +7398,9 @@ window.CHAPTERS = [
         "number": 4,
         "promptZh": "强调",
         "acceptedAnswers": [
-          "encompass",
-          "include",
-          "compose",
-          "constitute"
+          "emphasize",
+          "stress",
+          "focus on"
         ]
       },
       {
@@ -7410,9 +7408,9 @@ window.CHAPTERS = [
         "number": 5,
         "promptZh": "雇佣；应用",
         "acceptedAnswers": [
-          "ensure",
-          "guarantee",
-          "make sure"
+          "employ",
+          "use",
+          "exploit"
         ]
       },
       {
@@ -7420,9 +7418,10 @@ window.CHAPTERS = [
         "number": 6,
         "promptZh": "埋葬；设陷阱",
         "acceptedAnswers": [
-          "entire",
-          "whole",
-          "total"
+          "entomb",
+          "trap",
+          "bury",
+          "pitfall"
         ]
       },
       {
@@ -7440,10 +7439,9 @@ window.CHAPTERS = [
         "number": 8,
         "promptZh": "全部的",
         "acceptedAnswers": [
-          "entomb",
-          "trap",
-          "bury",
-          "pitfall"
+          "entire",
+          "whole",
+          "total"
         ]
       },
       {
@@ -7451,10 +7449,10 @@ window.CHAPTERS = [
         "number": 9,
         "promptZh": "发出，释放",
         "acceptedAnswers": [
-          "era",
-          "a period of time",
-          "age",
-          "epoch"
+          "emit",
+          "give off",
+          "produce",
+          "release"
         ]
       },
       {
@@ -7462,8 +7460,10 @@ window.CHAPTERS = [
         "number": 10,
         "promptZh": "包含，组成",
         "acceptedAnswers": [
-          "eradicate",
-          "eliminate"
+          "encompass",
+          "include",
+          "compose",
+          "constitute"
         ]
       }
     ],
@@ -8048,10 +8048,9 @@ window.CHAPTERS = [
         "number": 1,
         "promptZh": "浮现；出现",
         "acceptedAnswers": [
-          "disseminate",
-          "spread",
-          "impart",
-          "propagate"
+          "emerge",
+          "appear",
+          "advent"
         ]
       },
       {
@@ -8059,9 +8058,10 @@ window.CHAPTERS = [
         "number": 2,
         "promptZh": "散布；传播",
         "acceptedAnswers": [
-          "distinguish",
-          "differentiate",
-          "discriminate"
+          "disseminate",
+          "spread",
+          "impart",
+          "propagate"
         ]
       },
       {
@@ -8069,9 +8069,9 @@ window.CHAPTERS = [
         "number": 3,
         "promptZh": "基本，本质",
         "acceptedAnswers": [
-          "emerge",
-          "appear",
-          "advent"
+          "essence",
+          "basic",
+          "nature"
         ]
       },
       {
@@ -8079,9 +8079,9 @@ window.CHAPTERS = [
         "number": 4,
         "promptZh": "误以为",
         "acceptedAnswers": [
-          "erroneous ideas",
-          "misconception",
-          "misrepresentation"
+          "erroneously identified as",
+          "mistake",
+          "misunderstanding"
         ]
       },
       {
@@ -8089,36 +8089,17 @@ window.CHAPTERS = [
         "number": 5,
         "promptZh": "评估，鉴定",
         "acceptedAnswers": [
-          "erroneously identified as",
-          "mistake",
-          "misunderstanding"
+          "estimate",
+          "judge",
+          "evaluate",
+          "assess",
+          "identify"
         ]
       },
       {
         "id": "t6",
         "number": 6,
         "promptZh": "设立；创作",
-        "acceptedAnswers": [
-          "essence",
-          "basic",
-          "nature"
-        ]
-      },
-      {
-        "id": "t7",
-        "number": 7,
-        "promptZh": "误解",
-        "acceptedAnswers": [
-          "essential",
-          "fundamental",
-          "elementary",
-          "primary"
-        ]
-      },
-      {
-        "id": "t8",
-        "number": 8,
-        "promptZh": "adj.基本的",
         "acceptedAnswers": [
           "establish",
           "create",
@@ -8128,15 +8109,34 @@ window.CHAPTERS = [
         ]
       },
       {
+        "id": "t7",
+        "number": 7,
+        "promptZh": "误解",
+        "acceptedAnswers": [
+          "erroneous ideas",
+          "misconception",
+          "misrepresentation"
+        ]
+      },
+      {
+        "id": "t8",
+        "number": 8,
+        "promptZh": "adj基本的",
+        "acceptedAnswers": [
+          "essential",
+          "fundamental",
+          "elementary",
+          "primary"
+        ]
+      },
+      {
         "id": "t9",
         "number": 9,
         "promptZh": "区分；辨别",
         "acceptedAnswers": [
-          "estimate",
-          "judge",
-          "evaluate",
-          "assess",
-          "identify"
+          "distinguish",
+          "differentiate",
+          "discriminate"
         ]
       },
       {
@@ -8729,17 +8729,6 @@ window.CHAPTERS = [
         "number": 1,
         "promptZh": "造成，制成，执行",
         "acceptedAnswers": [
-          "exalted",
-          "implement",
-          "noble",
-          "aristocrat"
-        ]
-      },
-      {
-        "id": "t2",
-        "number": 2,
-        "promptZh": "小派系",
-        "acceptedAnswers": [
           "execute",
           "practice",
           "exercise",
@@ -8747,13 +8736,24 @@ window.CHAPTERS = [
         ]
       },
       {
+        "id": "t2",
+        "number": 2,
+        "promptZh": "小派系",
+        "acceptedAnswers": [
+          "faction",
+          "side",
+          "party"
+        ]
+      },
+      {
         "id": "t3",
         "number": 3,
         "promptZh": "非凡的，极度的",
         "acceptedAnswers": [
-          "exert",
-          "impact",
-          "effect"
+          "extraordinary",
+          "outstanding",
+          "distinctively",
+          "supreme"
         ]
       },
       {
@@ -8761,9 +8761,9 @@ window.CHAPTERS = [
         "number": 4,
         "promptZh": "运用，影响",
         "acceptedAnswers": [
-          "expose",
-          "subject to",
-          "uncover"
+          "exert",
+          "impact",
+          "effect"
         ]
       },
       {
@@ -8781,10 +8781,9 @@ window.CHAPTERS = [
         "number": 6,
         "promptZh": "提取，萃取(化学)",
         "acceptedAnswers": [
-          "extol",
-          "praise",
-          "compliment",
-          "encourage"
+          "extract",
+          "remove",
+          "abstract"
         ]
       },
       {
@@ -8792,9 +8791,10 @@ window.CHAPTERS = [
         "number": 7,
         "promptZh": "赞美，赞扬",
         "acceptedAnswers": [
-          "extract",
-          "remove",
-          "abstract"
+          "extol",
+          "praise",
+          "compliment",
+          "encourage"
         ]
       },
       {
@@ -8802,10 +8802,10 @@ window.CHAPTERS = [
         "number": 8,
         "promptZh": "高贵的，崇高的",
         "acceptedAnswers": [
-          "fabricate",
-          "manufacture",
-          "construct",
-          "assemble"
+          "exalted",
+          "implement",
+          "noble",
+          "aristocrat"
         ]
       },
       {
@@ -8813,9 +8813,9 @@ window.CHAPTERS = [
         "number": 9,
         "promptZh": "使暴露，暴露于",
         "acceptedAnswers": [
-          "faction",
-          "side",
-          "party"
+          "expose",
+          "subject to",
+          "uncover"
         ]
       },
       {
@@ -8823,10 +8823,10 @@ window.CHAPTERS = [
         "number": 10,
         "promptZh": "制作，装配",
         "acceptedAnswers": [
-          "extraordinary",
-          "outstanding",
-          "distinctively",
-          "supreme"
+          "fabricate",
+          "manufacture",
+          "construct",
+          "assemble"
         ]
       }
     ],
@@ -9401,8 +9401,9 @@ window.CHAPTERS = [
         "number": 1,
         "promptZh": "致命的",
         "acceptedAnswers": [
-          "fame",
-          "reputation"
+          "fatal",
+          "deadly",
+          "lethal"
         ]
       },
       {
@@ -9410,9 +9411,8 @@ window.CHAPTERS = [
         "number": 2,
         "promptZh": "称赞的，奉承的",
         "acceptedAnswers": [
-          "fatal",
-          "deadly",
-          "lethal"
+          "flattering",
+          "complimentary"
         ]
       },
       {
@@ -9420,9 +9420,8 @@ window.CHAPTERS = [
         "number": 3,
         "promptZh": "名声",
         "acceptedAnswers": [
-          "fine",
-          "tiny",
-          "minute"
+          "fame",
+          "reputation"
         ]
       },
       {
@@ -9430,24 +9429,15 @@ window.CHAPTERS = [
         "number": 4,
         "promptZh": "细小的",
         "acceptedAnswers": [
-          "flattering",
-          "complimentary"
+          "fine",
+          "tiny",
+          "minute"
         ]
       },
       {
         "id": "t5",
         "number": 5,
         "promptZh": "侦查，寻找",
-        "acceptedAnswers": [
-          "flourish",
-          "thrive",
-          "boom"
-        ]
-      },
-      {
-        "id": "t6",
-        "number": 6,
-        "promptZh": "茂盛",
         "acceptedAnswers": [
           "forage",
           "look for food",
@@ -9456,14 +9446,24 @@ window.CHAPTERS = [
         ]
       },
       {
+        "id": "t6",
+        "number": 6,
+        "promptZh": "茂盛",
+        "acceptedAnswers": [
+          "flourish",
+          "thrive",
+          "boom"
+        ]
+      },
+      {
         "id": "t7",
         "number": 7,
         "promptZh": "向前看的，有远见的",
         "acceptedAnswers": [
-          "formidable",
-          "difficult",
-          "demanding",
-          "awesome"
+          "forward",
+          "looking",
+          "progressive",
+          "visionary"
         ]
       },
       {
@@ -9471,10 +9471,9 @@ window.CHAPTERS = [
         "number": 8,
         "promptZh": "基础的，基本的",
         "acceptedAnswers": [
-          "forward",
-          "looking",
-          "progressive",
-          "visionary"
+          "fundamental",
+          "rudimentary",
+          "basic"
         ]
       },
       {
@@ -9492,9 +9491,10 @@ window.CHAPTERS = [
         "number": 10,
         "promptZh": "艰难的",
         "acceptedAnswers": [
-          "fundamental",
-          "rudimentary",
-          "basic"
+          "formidable",
+          "difficult",
+          "demanding",
+          "awesome"
         ]
       }
     ],
@@ -10067,9 +10067,9 @@ window.CHAPTERS = [
         "number": 1,
         "promptZh": "生动的",
         "acceptedAnswers": [
-          "glowing",
-          "shining",
-          "luminous"
+          "graphic",
+          "vivid",
+          "lively"
         ]
       },
       {
@@ -10077,9 +10077,9 @@ window.CHAPTERS = [
         "number": 2,
         "promptZh": "光亮的",
         "acceptedAnswers": [
-          "graphic",
-          "vivid",
-          "lively"
+          "glowing",
+          "shining",
+          "luminous"
         ]
       },
       {
@@ -10097,10 +10097,10 @@ window.CHAPTERS = [
         "number": 4,
         "promptZh": "妨碍，阻碍",
         "acceptedAnswers": [
-          "herald",
-          "announce",
-          "predict",
-          "indicate"
+          "impediment",
+          "obstacle",
+          "hurdle",
+          "handicap"
         ]
       },
       {
@@ -10108,8 +10108,9 @@ window.CHAPTERS = [
         "number": 5,
         "promptZh": "模仿，伪造",
         "acceptedAnswers": [
-          "identical",
-          "exactly alike"
+          "imitate",
+          "mimic",
+          "copy"
         ]
       },
       {
@@ -10117,9 +10118,10 @@ window.CHAPTERS = [
         "number": 6,
         "promptZh": "预示，预报",
         "acceptedAnswers": [
-          "imitate",
-          "mimic",
-          "copy"
+          "herald",
+          "announce",
+          "predict",
+          "indicate"
         ]
       },
       {
@@ -10127,9 +10129,8 @@ window.CHAPTERS = [
         "number": 7,
         "promptZh": "同样的",
         "acceptedAnswers": [
-          "immutable",
-          "unchangeable",
-          "consistent"
+          "identical",
+          "exactly alike"
         ]
       },
       {
@@ -10137,10 +10138,9 @@ window.CHAPTERS = [
         "number": 8,
         "promptZh": "不变的",
         "acceptedAnswers": [
-          "impediment",
-          "obstacle",
-          "hurdle",
-          "handicap"
+          "immutable",
+          "unchangeable",
+          "consistent"
         ]
       },
       {
@@ -10730,8 +10730,8 @@ window.CHAPTERS = [
         "number": 1,
         "promptZh": "紧迫的，紧急的",
         "acceptedAnswers": [
-          "implication",
-          "significance"
+          "imposing",
+          "demanding"
         ]
       },
       {
@@ -10739,8 +10739,8 @@ window.CHAPTERS = [
         "number": 2,
         "promptZh": "含义，意义",
         "acceptedAnswers": [
-          "imposing",
-          "demanding"
+          "implication",
+          "significance"
         ]
       },
       {
@@ -10757,9 +10757,9 @@ window.CHAPTERS = [
         "number": 4,
         "promptZh": "难接近的，难达到的",
         "acceptedAnswers": [
-          "in place of",
-          "instead of",
-          "rather than"
+          "inaccessible",
+          "unreachable",
+          "impossible"
         ]
       },
       {
@@ -10767,9 +10767,9 @@ window.CHAPTERS = [
         "number": 5,
         "promptZh": "代替",
         "acceptedAnswers": [
-          "inaccessible",
-          "unreachable",
-          "impossible"
+          "in place of",
+          "instead of",
+          "rather than"
         ]
       },
       {
@@ -10777,9 +10777,9 @@ window.CHAPTERS = [
         "number": 6,
         "promptZh": "燃烧",
         "acceptedAnswers": [
-          "inception",
-          "beginning",
-          "initiative"
+          "incinerate",
+          "burn up",
+          "combust"
         ]
       },
       {
@@ -10787,9 +10787,9 @@ window.CHAPTERS = [
         "number": 7,
         "promptZh": "起初",
         "acceptedAnswers": [
-          "incinerate",
-          "burn up",
-          "combust"
+          "inception",
+          "beginning",
+          "initiative"
         ]
       },
       {
@@ -10797,10 +10797,10 @@ window.CHAPTERS = [
         "number": 8,
         "promptZh": "倾向，偏好",
         "acceptedAnswers": [
-          "incised",
-          "inscribe",
-          "embed",
-          "carved"
+          "inclination",
+          "preference",
+          "prone to",
+          "tendency"
         ]
       },
       {
@@ -10808,10 +10808,10 @@ window.CHAPTERS = [
         "number": 9,
         "promptZh": "雕刻的",
         "acceptedAnswers": [
-          "inclination",
-          "preference",
-          "prone to",
-          "tendency"
+          "incised",
+          "inscribe",
+          "embed",
+          "carved"
         ]
       },
       {
@@ -11406,28 +11406,6 @@ window.CHAPTERS = [
         "number": 1,
         "promptZh": "目的",
         "acceptedAnswers": [
-          "integral",
-          "essential",
-          "fundamental",
-          "indispensable"
-        ]
-      },
-      {
-        "id": "t2",
-        "number": 2,
-        "promptZh": "周期",
-        "acceptedAnswers": [
-          "intense",
-          "extreme",
-          "tight",
-          "concentrate"
-        ]
-      },
-      {
-        "id": "t3",
-        "number": 3,
-        "promptZh": "干涉，影响",
-        "acceptedAnswers": [
           "intent",
           "goal",
           "purpose",
@@ -11435,19 +11413,9 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t4",
-        "number": 4,
-        "promptZh": "复杂的，精密的",
-        "acceptedAnswers": [
-          "interchangeable",
-          "equivalent",
-          "communicable"
-        ]
-      },
-      {
-        "id": "t5",
-        "number": 5,
-        "promptZh": "整体的",
+        "id": "t2",
+        "number": 2,
+        "promptZh": "周期",
         "acceptedAnswers": [
           "intervals",
           "periods",
@@ -11455,9 +11423,9 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t6",
-        "number": 6,
-        "promptZh": "相等的",
+        "id": "t3",
+        "number": 3,
+        "promptZh": "干涉，影响",
         "acceptedAnswers": [
           "intervention",
           "influence",
@@ -11465,14 +11433,46 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t7",
-        "number": 7,
-        "promptZh": "强烈的，聚集",
+        "id": "t4",
+        "number": 4,
+        "promptZh": "复杂的，精密的",
         "acceptedAnswers": [
           "Intricate",
           "complex",
           "sophisticated",
           "complicated"
+        ]
+      },
+      {
+        "id": "t5",
+        "number": 5,
+        "promptZh": "整体的",
+        "acceptedAnswers": [
+          "integral",
+          "essential",
+          "fundamental",
+          "indispensable"
+        ]
+      },
+      {
+        "id": "t6",
+        "number": 6,
+        "promptZh": "相等的",
+        "acceptedAnswers": [
+          "interchangeable",
+          "equivalent",
+          "communicable"
+        ]
+      },
+      {
+        "id": "t7",
+        "number": 7,
+        "promptZh": "强烈的，聚集",
+        "acceptedAnswers": [
+          "intense",
+          "extreme",
+          "tight",
+          "concentrate"
         ]
       },
       {
@@ -11491,9 +11491,10 @@ window.CHAPTERS = [
         "number": 9,
         "promptZh": "研究，调查",
         "acceptedAnswers": [
-          "investment",
-          "capital",
-          "finance"
+          "investigate",
+          "research",
+          "survey",
+          "peruse"
         ]
       },
       {
@@ -11501,10 +11502,9 @@ window.CHAPTERS = [
         "number": 10,
         "promptZh": "资本，投资",
         "acceptedAnswers": [
-          "investigate",
-          "research",
-          "survey",
-          "peruse"
+          "investment",
+          "capital",
+          "finance"
         ]
       }
     ],
@@ -12108,28 +12108,6 @@ window.CHAPTERS = [
         "number": 2,
         "promptZh": "重担",
         "acceptedAnswers": [
-          "laborious",
-          "difficult",
-          "hard",
-          "toilsome"
-        ]
-      },
-      {
-        "id": "t3",
-        "number": 3,
-        "promptZh": "寿命",
-        "acceptedAnswers": [
-          "literacy",
-          "education",
-          "intellectual",
-          "cultural"
-        ]
-      },
-      {
-        "id": "t4",
-        "number": 4,
-        "promptZh": "吸引，引诱",
-        "acceptedAnswers": [
           "load",
           "weight",
           "burden",
@@ -12137,9 +12115,9 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t5",
-        "number": 5,
-        "promptZh": "放大；强化",
+        "id": "t3",
+        "number": 3,
+        "promptZh": "寿命",
         "acceptedAnswers": [
           "longevity",
           "life span",
@@ -12148,9 +12126,9 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t6",
-        "number": 6,
-        "promptZh": "维持；坚持",
+        "id": "t4",
+        "number": 4,
+        "promptZh": "吸引，引诱",
         "acceptedAnswers": [
           "lure",
           "attract",
@@ -12159,9 +12137,9 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t7",
-        "number": 7,
-        "promptZh": "主要的；大型的",
+        "id": "t5",
+        "number": 5,
+        "promptZh": "放大；强化",
         "acceptedAnswers": [
           "magnify",
           "intensify",
@@ -12170,9 +12148,9 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t8",
-        "number": 8,
-        "promptZh": "要求",
+        "id": "t6",
+        "number": 6,
+        "promptZh": "维持；坚持",
         "acceptedAnswers": [
           "maintain",
           "preserve",
@@ -12181,9 +12159,9 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t9",
-        "number": 9,
-        "promptZh": "费力的",
+        "id": "t7",
+        "number": 7,
+        "promptZh": "主要的；大型的",
         "acceptedAnswers": [
           "major",
           "principal",
@@ -12192,14 +12170,36 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t10",
-        "number": 10,
-        "promptZh": "文化，教育",
+        "id": "t8",
+        "number": 8,
+        "promptZh": "要求",
         "acceptedAnswers": [
           "mandated",
           "required",
           "demand",
           "command"
+        ]
+      },
+      {
+        "id": "t9",
+        "number": 9,
+        "promptZh": "费力的",
+        "acceptedAnswers": [
+          "laborious",
+          "difficult",
+          "hard",
+          "toilsome"
+        ]
+      },
+      {
+        "id": "t10",
+        "number": 10,
+        "promptZh": "文化，教育",
+        "acceptedAnswers": [
+          "literacy",
+          "education",
+          "intellectual",
+          "cultural"
         ]
       }
     ],
@@ -12794,29 +12794,6 @@ window.CHAPTERS = [
         "number": 1,
         "promptZh": "掌握，掌控",
         "acceptedAnswers": [
-          "margin",
-          "edge",
-          "border",
-          "verge"
-        ]
-      },
-      {
-        "id": "t2",
-        "number": 2,
-        "promptZh": "方法",
-        "acceptedAnswers": [
-          "marked",
-          "noticeable",
-          "eye",
-          "catching",
-          "observable"
-        ]
-      },
-      {
-        "id": "t3",
-        "number": 3,
-        "promptZh": "边，边缘",
-        "acceptedAnswers": [
           "master",
           "control",
           "power",
@@ -12824,14 +12801,36 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t4",
-        "number": 4,
-        "promptZh": "很小的，微小的",
+        "id": "t2",
+        "number": 2,
+        "promptZh": "方法",
         "acceptedAnswers": [
           "means",
           "method",
           "approach",
           "technique"
+        ]
+      },
+      {
+        "id": "t3",
+        "number": 3,
+        "promptZh": "边，边缘",
+        "acceptedAnswers": [
+          "margin",
+          "edge",
+          "border",
+          "verge"
+        ]
+      },
+      {
+        "id": "t4",
+        "number": 4,
+        "promptZh": "很小的，微小的",
+        "acceptedAnswers": [
+          "minuscule",
+          "tiny",
+          "fine",
+          "mini"
         ]
       },
       {
@@ -12850,10 +12849,10 @@ window.CHAPTERS = [
         "number": 6,
         "promptZh": "此外",
         "acceptedAnswers": [
-          "meticulously",
-          "carefully",
-          "cautiously",
-          "prudently"
+          "moreover",
+          "furthermore",
+          "in addition",
+          "besides"
         ]
       },
       {
@@ -12861,10 +12860,10 @@ window.CHAPTERS = [
         "number": 7,
         "promptZh": "小心地",
         "acceptedAnswers": [
-          "minuscule",
-          "tiny",
-          "fine",
-          "mini"
+          "meticulously",
+          "carefully",
+          "cautiously",
+          "prudently"
         ]
       },
       {
@@ -12883,10 +12882,10 @@ window.CHAPTERS = [
         "number": 9,
         "promptZh": "凡人，普通人",
         "acceptedAnswers": [
-          "moreover",
-          "furthermore",
-          "in addition",
-          "besides"
+          "mortal",
+          "people",
+          "organism",
+          "death"
         ]
       },
       {
@@ -12894,10 +12893,11 @@ window.CHAPTERS = [
         "number": 10,
         "promptZh": "显著的",
         "acceptedAnswers": [
-          "mortal",
-          "people",
-          "organism",
-          "death"
+          "marked",
+          "noticeable",
+          "eye",
+          "catching",
+          "observable"
         ]
       }
     ],
@@ -13490,39 +13490,6 @@ window.CHAPTERS = [
         "number": 1,
         "promptZh": "新生的；初生的",
         "acceptedAnswers": [
-          "motif",
-          "design",
-          "pattern",
-          "decoration"
-        ]
-      },
-      {
-        "id": "t2",
-        "number": 2,
-        "promptZh": "图案；花纹",
-        "acceptedAnswers": [
-          "mundane",
-          "ordinary",
-          "secular",
-          "plain"
-        ]
-      },
-      {
-        "id": "t3",
-        "number": 3,
-        "promptZh": "然而；仍然",
-        "acceptedAnswers": [
-          "myriad",
-          "many",
-          "mass",
-          "numerous"
-        ]
-      },
-      {
-        "id": "t4",
-        "number": 4,
-        "promptZh": "尽管",
-        "acceptedAnswers": [
           "nascent",
           "immature",
           "budding",
@@ -13530,9 +13497,20 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t5",
-        "number": 5,
-        "promptZh": "标准，规格",
+        "id": "t2",
+        "number": 2,
+        "promptZh": "图案；花纹",
+        "acceptedAnswers": [
+          "motif",
+          "design",
+          "pattern",
+          "decoration"
+        ]
+      },
+      {
+        "id": "t3",
+        "number": 3,
+        "promptZh": "然而；仍然",
         "acceptedAnswers": [
           "nevertheless",
           "nonetheless",
@@ -13541,31 +13519,9 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t6",
-        "number": 6,
-        "promptZh": "注意到",
-        "acceptedAnswers": [
-          "norm",
-          "standard",
-          "specification",
-          "benchmark"
-        ]
-      },
-      {
-        "id": "t7",
-        "number": 7,
-        "promptZh": "许多的；无数的",
-        "acceptedAnswers": [
-          "noted",
-          "observed",
-          "be aware of",
-          "sense"
-        ]
-      },
-      {
-        "id": "t8",
-        "number": 8,
-        "promptZh": "有害的；有毒的",
+        "id": "t4",
+        "number": 4,
+        "promptZh": "尽管",
         "acceptedAnswers": [
           "Notwithstanding",
           "despite",
@@ -13574,9 +13530,42 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t9",
-        "number": 9,
-        "promptZh": "气味；嗅觉",
+        "id": "t5",
+        "number": 5,
+        "promptZh": "标准，规格",
+        "acceptedAnswers": [
+          "norm",
+          "standard",
+          "specification",
+          "benchmark"
+        ]
+      },
+      {
+        "id": "t6",
+        "number": 6,
+        "promptZh": "注意到",
+        "acceptedAnswers": [
+          "noted",
+          "observed",
+          "be aware of",
+          "sense"
+        ]
+      },
+      {
+        "id": "t7",
+        "number": 7,
+        "promptZh": "许多的；无数的",
+        "acceptedAnswers": [
+          "myriad",
+          "many",
+          "mass",
+          "numerous"
+        ]
+      },
+      {
+        "id": "t8",
+        "number": 8,
+        "promptZh": "有害的；有毒的",
         "acceptedAnswers": [
           "noxious",
           "harmful",
@@ -13585,14 +13574,25 @@ window.CHAPTERS = [
         ]
       },
       {
-        "id": "t10",
-        "number": 10,
-        "promptZh": "普通的；平庸的",
+        "id": "t9",
+        "number": 9,
+        "promptZh": "气味；嗅觉",
         "acceptedAnswers": [
           "odour",
           "smell",
           "olfactory",
           "fragrance"
+        ]
+      },
+      {
+        "id": "t10",
+        "number": 10,
+        "promptZh": "普通的；平庸的",
+        "acceptedAnswers": [
+          "mundane",
+          "ordinary",
+          "secular",
+          "plain"
         ]
       }
     ],

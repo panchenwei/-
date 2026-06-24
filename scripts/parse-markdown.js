@@ -28,16 +28,8 @@ const chapters = parseChapters(markdownText, pdfPages);
 validateChapters(chapters);
 
 fs.mkdirSync(DATA_DIR, { recursive: true });
-fs.writeFileSync(
-  path.join(DATA_DIR, "chapters.json"),
-  JSON.stringify(chapters, null, 2),
-  "utf8",
-);
-fs.writeFileSync(
-  path.join(DATA_DIR, "chapters.js"),
-  `window.CHAPTERS = ${JSON.stringify(chapters, null, 2)};\n`,
-  "utf8",
-);
+fs.writeFileSync(path.join(DATA_DIR, "chapters.json"), JSON.stringify(chapters, null, 2), "utf8");
+fs.writeFileSync(path.join(DATA_DIR, "chapters.js"), `window.CHAPTERS = ${JSON.stringify(chapters, null, 2)};\n`, "utf8");
 
 console.log(`Generated ${chapters.length} chapters from:`);
 console.log(`- Markdown: ${sourceMarkdown}`);
@@ -65,15 +57,11 @@ for page in reader.pages:
 print(json.dumps(pages, ensure_ascii=False))
 `;
 
-  const output = execFileSync(
-    "python",
-    ["-X", "utf8", "-c", pythonScript, pdfPath],
-    {
-      encoding: "utf8",
-      maxBuffer: 20 * 1024 * 1024,
-      stdio: ["ignore", "pipe", "ignore"],
-    },
-  );
+  const output = execFileSync("python", ["-X", "utf8", "-c", pythonScript, pdfPath], {
+    encoding: "utf8",
+    maxBuffer: 20 * 1024 * 1024,
+    stdio: ["ignore", "pipe", "ignore"],
+  });
 
   return JSON.parse(output);
 }
@@ -100,9 +88,7 @@ function parseChapters(text, pdfPages) {
     const rawBlock = text.slice(cursor, answerStart).trim();
     const answerBlock = text.slice(answerStart, answerEnd).trim();
 
-    const chapter = parseChapterBlock(chapterNumber, rawBlock, answerBlock, pdfPages);
-    chapters.push(chapter);
-
+    chapters.push(parseChapterBlock(chapterNumber, rawBlock, answerBlock, pdfPages));
     cursor = answerEnd;
   }
 
@@ -111,15 +97,11 @@ function parseChapters(text, pdfPages) {
 
 function findAnswerEnd(text, answerStart, chapterNumber) {
   const tail = text.slice(answerStart);
-  const pattern = new RegExp(
-    String.raw`Test\s*yourself\s*答案[^\\n]*List\s*${chapterNumber}\b`,
-    "i",
-  );
+  const pattern = new RegExp(String.raw`Test\s*yourself\s*答案[^\n]*List\s*${chapterNumber}\b`, "i");
   const match = pattern.exec(tail);
   if (!match) {
     throw new Error(`Could not locate the end of List ${chapterNumber} answers.`);
   }
-
   return answerStart + match.index + match[0].length;
 }
 
@@ -140,8 +122,8 @@ function parseChapterBlock(chapterNumber, rawBlock, answerBlock, pdfPages) {
   const paraphrases = parseParaphrases(paraphraseSection);
   const answers = parseAnswers(answerBlock);
   const matching = parseMatching(matchingSection, answers.matching);
-  const pdfChoices = parseChoicesFromPdf(pdfPages, chapterNumber, answers.choices);
   const markdownChoices = parseChoices(choicesSection, answers.choices);
+  const pdfChoices = parseChoicesFromPdf(pdfPages, chapterNumber, answers.choices);
   const choices = shouldUsePdfChoices(markdownChoices) ? pdfChoices : markdownChoices;
   const testYourself = parseTestYourself(testSection, paraphrases);
 
@@ -182,7 +164,6 @@ function parseParaphrases(sectionText) {
 
     let partOfSpeech = "";
     let termPart = englishPart;
-
     const posMatch = termPart.match(/\b(v|n|a|ad|adj|adv|vt|vi)\.?$/i);
     if (posMatch) {
       partOfSpeech = posMatch[1].toLowerCase();
@@ -201,30 +182,25 @@ function parseParaphrases(sectionText) {
       synonyms: terms.slice(1),
       allTerms: uniqueList(terms),
       partOfSpeech,
-      meaningZh: normalizeChineseText(meaningZh),
+      meaningZh: safeNormalizeChineseText(meaningZh),
       sourceLine: value,
     };
   });
 }
 
 function parseMatching(sectionText, answerMap) {
-  const table = extractFirstTable(sectionText);
-  const rows = extractTableRows(table);
-
+  const rows = extractTableRows(extractFirstTable(sectionText));
   const prompts = [];
   const options = [];
 
   rows.forEach((cells, index) => {
     const promptText = cleanHtmlText(cells[1] || "");
     const optionMatch = cleanHtmlText(cells[cells.length - 1] || "").match(/^([A-J])\.\s*(.+)$/);
-
     if (!optionMatch) {
       throw new Error(`Matching option parse failed for row ${index + 1}.`);
     }
 
     const promptId = `m${index + 1}`;
-    const optionId = optionMatch[1];
-
     prompts.push({
       id: promptId,
       number: index + 1,
@@ -233,24 +209,16 @@ function parseMatching(sectionText, answerMap) {
     });
 
     options.push({
-      id: optionId,
+      id: optionMatch[1],
       text: optionMatch[2].trim(),
     });
   });
 
-  return {
-    prompts,
-    options,
-    answerMap,
-  };
+  return { prompts, options, answerMap };
 }
 
 function parseChoices(sectionText, answerLetters) {
-  const body = sectionText
-    .replace(/^##\s*Choices[^\n]*\n?/i, "")
-    .replace(/\u00a0/g, " ")
-    .trim();
-
+  const body = sectionText.replace(/^##\s*Choices[^\n]*\n?/i, "").replace(/\u00a0/g, " ").trim();
   return parseChoiceQuestionText(body, answerLetters);
 }
 
@@ -258,14 +226,13 @@ function parseChoicesFromPdf(pdfPages, chapterNumber, answerLetters) {
   const basePage = 2 + (chapterNumber - 1) * 4;
   const choicePages = [pdfPages[basePage + 1] || "", pdfPages[basePage + 2] || ""].join("\n");
   const marker = choicePages.indexOf("Choices");
-
   if (marker === -1) {
     throw new Error(`Could not locate PDF choices for List ${chapterNumber}.`);
   }
 
   const body = choicePages
     .slice(marker)
-    .replace(/^.*?Choices\s*–\s*odd one out\s*选非题/i, "")
+    .replace(/^.*?Choices\s*[–-]\s*odd one out\s*选非题/i, "")
     .trim();
 
   return parseChoiceQuestionText(body, answerLetters);
@@ -278,11 +245,11 @@ function parseChoiceQuestionText(sectionText, answerLetters) {
     .replace(/\s+/g, " ")
     .replace(/\s+\d+\s+(?=\d+\.\s*下面)/g, " ")
     .trim();
+
   const regex =
     /(?:(\d+)\.\s*)?(下面[那哪]个不是.*?)[ ]A[\.．]\s*(.*?)[ ]B[\.．]\s*(.*?)[ ]C[\.．]\s*(.*?)[ ]D[\.．]\s*(.*?)(?=(?:(?:\s+\d+\.\s*|\s+)下面[那哪]个不是)|$)/g;
 
   const matches = [...flattened.matchAll(regex)];
-
   if (matches.length) {
     return matches.map((match, index) => {
       const number = match[1] ? Number(match[1]) : index + 1;
@@ -328,28 +295,80 @@ function parseChoiceQuestionText(sectionText, answerLetters) {
 }
 
 function shouldUsePdfChoices(markdownChoices) {
-  return (
-    markdownChoices.length !== 10 ||
-    markdownChoices.some((choice) => choice.options.length < 4 || !choice.question)
-  );
+  return markdownChoices.length !== 10 || markdownChoices.some((choice) => choice.options.length < 4 || !choice.question);
 }
 
 function parseTestYourself(sectionText, paraphrases) {
-  const table = extractFirstTable(sectionText);
-  const rows = extractTableRows(table);
+  const rows = extractTableRows(extractFirstTable(sectionText));
 
   return rows.map((cells, index) => {
     const promptZh = cleanHtmlText(cells[0] || "").replace(/^\d+\.\s*/, "").trim();
-    const paraphrase = paraphrases[index];
-    const acceptedAnswers = uniqueList(paraphrase ? paraphrase.allTerms : []);
+    const paraphrase = findBestParaphraseForPrompt(promptZh, paraphrases);
 
     return {
       id: `t${index + 1}`,
       number: index + 1,
-      promptZh: normalizeChineseText(promptZh),
-      acceptedAnswers,
+      promptZh: safeNormalizeChineseText(promptZh),
+      acceptedAnswers: uniqueList(paraphrase ? paraphrase.allTerms : []),
     };
   });
+}
+
+function findBestParaphraseForPrompt(promptZh, paraphrases) {
+  const promptTokens = safeTokenizeChineseMeaning(promptZh);
+  const promptKey = safeNormalizeChineseText(promptZh);
+  let best = null;
+  let bestScore = -1;
+
+  for (const paraphrase of paraphrases) {
+    const meaningTokens = safeTokenizeChineseMeaning(paraphrase.meaningZh);
+    const meaningKey = safeNormalizeChineseText(paraphrase.meaningZh);
+    let score = 0;
+
+    for (const token of promptTokens) {
+      if (meaningTokens.includes(token)) {
+        score += 3;
+      } else if (meaningKey.includes(token)) {
+        score += 2;
+      }
+    }
+
+    if (promptKey && (promptKey === meaningKey || meaningKey.includes(promptKey) || promptKey.includes(meaningKey))) {
+      score += 4;
+    }
+
+    score += sharedChineseCharCount(promptKey, meaningKey) * 0.5;
+
+    if (score > bestScore) {
+      bestScore = score;
+      best = paraphrase;
+    }
+  }
+
+  return bestScore > 0 ? best : null;
+}
+
+function sharedChineseCharCount(left, right) {
+  const leftChars = [...new Set((left.match(/[\u3400-\u9fff]/g) || []))];
+  const rightSet = new Set(right.match(/[\u3400-\u9fff]/g) || []);
+  return leftChars.filter((char) => rightSet.has(char)).length;
+}
+
+function safeNormalizeChineseText(text) {
+  return String(text)
+    .replace(/\s+/g, "")
+    .replace(/[\uFF0C,]/g, "\uFF0C")
+    .replace(/[\uFF1B;]/g, "\uFF1B")
+    .replace(/[\uFF1A:]/g, "\uFF1A")
+    .replace(/[\u3002.]/g, "")
+    .trim();
+}
+
+function safeTokenizeChineseMeaning(text) {
+  return safeNormalizeChineseText(text)
+    .split(/[\uFF0C\uFF1B\uFF1A]/)
+    .map((token) => token.trim())
+    .filter(Boolean);
 }
 
 function parseAnswers(answerBlock) {
@@ -367,18 +386,12 @@ function parseAnswers(answerBlock) {
     choices[`c${index}`] = letter;
   }
 
-  return {
-    matching,
-    choices,
-  };
+  return { matching, choices };
 }
 
 function captureBetween(text, startRegex, endRegex) {
   const startMatch = startRegex.exec(text);
-  if (!startMatch) {
-    return "";
-  }
-
+  if (!startMatch) return "";
   const tail = text.slice(startMatch.index + startMatch[0].length);
   const endMatch = endRegex.exec(tail);
   return endMatch ? tail.slice(0, endMatch.index) : tail;
@@ -389,7 +402,6 @@ function extractFirstTable(text) {
   if (!match) {
     throw new Error("Expected an HTML table but none was found.");
   }
-
   return match[0];
 }
 
@@ -411,11 +423,18 @@ function cleanHtmlText(value) {
 function normalizeChineseText(text) {
   return text
     .replace(/\s+/g, "")
-    .replace(/[；;]/g, "；")
     .replace(/[，,]/g, "，")
+    .replace(/[；;]/g, "；")
     .replace(/[：:]/g, "：")
-    .replace(/[。]/g, "")
+    .replace(/[。\.]/g, "")
     .trim();
+}
+
+function tokenizeChineseMeaning(text) {
+  return normalizeChineseText(text)
+    .split(/[，；：]/)
+    .map((token) => token.trim())
+    .filter(Boolean);
 }
 
 function normalizeLetter(value) {
@@ -442,12 +461,8 @@ function validateChapters(chapters) {
     if (chapter.matching.options.length !== 10) problems.push(`matching options=${chapter.matching.options.length}`);
     if (chapter.choices.length !== 10) problems.push(`choices=${chapter.choices.length}`);
     if (chapter.testYourself.length !== 10) problems.push(`test=${chapter.testYourself.length}`);
-    if (chapter.choices.some((choice) => choice.options.length < 4)) {
-      problems.push("incomplete choice options");
-    }
-    if (chapter.testYourself.some((item) => item.acceptedAnswers.length === 0)) {
-      problems.push("empty test answers");
-    }
+    if (chapter.choices.some((choice) => choice.options.length < 4)) problems.push("incomplete choice options");
+    if (chapter.testYourself.some((item) => item.acceptedAnswers.length === 0)) problems.push("empty test answers");
 
     if (problems.length) {
       throw new Error(`List ${chapter.number} validation failed: ${problems.join(", ")}`);
